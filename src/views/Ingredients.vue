@@ -17,6 +17,7 @@ onMounted(() => {
 
 const searchIngredients = computed(() => {
     if (!searchIngredients) return ingredients
+    
     return ingredients.value.filter( (i) => i.strIngredient.toLowerCase().includes(keyword.value.toLowerCase()))
 })
 
